@@ -1,4 +1,4 @@
-# poffer_syncer
+# Poffer Syncer
 
 ## Getting Started
 
