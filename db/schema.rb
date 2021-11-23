@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_03_162507) do
+ActiveRecord::Schema.define(version: 2021_11_23_213549) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,6 +41,39 @@ ActiveRecord::Schema.define(version: 2021_11_03_162507) do
     t.bigint "blob_id", null: false
     t.string "variation_digest", null: false
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
+
+  create_table "hootsuite_tokens", force: :cascade do |t|
+    t.string "access_token"
+    t.string "refresh_token"
+    t.boolean "valid"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pocket_tokens", force: :cascade do |t|
+    t.string "code"
+    t.string "token"
+    t.boolean "valid"
+    t.datetime "deleted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "schedule_times", force: :cascade do |t|
+    t.time "precise_time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "scheduled_articles", force: :cascade do |t|
+    t.string "item_id"
+    t.string "item_title"
+    t.string "item_url"
+    t.datetime "scheduled_time"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
