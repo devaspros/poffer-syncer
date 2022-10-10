@@ -9,4 +9,4 @@ require("local-time").start()
 window.Rails = Rails
 
 import 'bootstrap'
-import 'data-confirm-modal'
+// import 'data-confirm-modal'
