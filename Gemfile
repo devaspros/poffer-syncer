@@ -23,6 +23,8 @@ gem 'sqlite3', '~> 1.4'
 gem 'webpacker', '~> 4.0'
 gem 'whenever', require: false
 
+gem 'pocket', github: 'devaspros/pocket', branch: 'main'
+
 group :development do
   gem 'annotate', '~> 3'
   gem 'foreman'

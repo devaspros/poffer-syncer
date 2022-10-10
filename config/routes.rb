@@ -5,6 +5,13 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :oauth, only: [] do
+    collection do
+      get 'connect'
+      get 'callback'
+    end
+  end
+
   authenticate :user, lambda { |u| u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
 
