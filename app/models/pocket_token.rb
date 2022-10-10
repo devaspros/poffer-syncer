@@ -1,4 +1,6 @@
 class PocketToken < ApplicationRecord
+  validates :token, presence: true
+  validates :code, presence: true
 end
 
 # == Schema Information

@@ -1,8 +1,15 @@
 class User < ApplicationRecord
-  # Include default devise :masqueradable,  modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :masqueradable,  :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+  validates :email, presence: true
+  validates :password, presence: true
+
+  devise :masqueradable,
+         :database_authenticatable,
+         :registerable,
+         :recoverable,
+         :rememberable,
+         :validatable
 end
 
 # == Schema Information

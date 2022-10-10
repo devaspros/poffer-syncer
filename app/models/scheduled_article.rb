@@ -1,4 +1,7 @@
 class ScheduledArticle < ApplicationRecord
+  validates :item_id, presence: true
+  validates :item_title, presence: true
+  validates :item_url, presence: true
 end
 
 # == Schema Information
