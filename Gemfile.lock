@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/devaspros/pocket.git
-  revision: 1fb846e11187cd6a82b9afdb68e2d2a66e5da3f7
+  revision: e0dcf0040f70a0e46fc53c7a455c1f3ad8b5763e
   branch: main
   specs:
     pocket (0.1.0)
