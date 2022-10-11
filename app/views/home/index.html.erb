@@ -1,1 +1,11 @@
-<a href="oauth/connect">Conectar con Pocket</a>
+<% if @recent_scheduled&.any? %>
+  <h2>Más Recientes</h2>
+
+  <p>Uno</p>
+<% else %>
+  <div class="row mt-3 mb-3">
+    <div class="col-md-4">
+      <%= link_to 'Configurar servicios', settings_path, class: 'btn btn-lg btn-primary' %>
+    </div>
+  </div>
+<% end %>
