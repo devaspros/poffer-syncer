@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/devaspros/pocket.git
-  revision: 68898de8082cbbe64d26f6874e23551f248524af
+  revision: 1fb846e11187cd6a82b9afdb68e2d2a66e5da3f7
   branch: main
   specs:
     pocket (0.1.0)
@@ -131,7 +131,7 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
-    ffi (1.15.4)
+    ffi (1.15.5)
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
